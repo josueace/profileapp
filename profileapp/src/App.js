@@ -56,7 +56,7 @@ render(){
     <div className="App">
     <Switch>
       
-      <Route path="/signup" component={Signup}/>
+    <Route path="/signup" render={() => <Signup getUser={this.getTheUser}/>} />
      
   <Route path="/login" render={() => <Login getUser={this.getTheUser}/>} />
       <Route  path="/profile" render={() => <Profile User={this.state.loggedInUser}/>}/>

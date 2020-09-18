@@ -15,8 +15,9 @@ constructor(props){
 handleFormSubmit=()=> {
 service.login(this.state)
 .then(res =>{
+
     this.setState({username:'',password:''});
-    this.props.getUser(res)
+    this.props.getUser(res.data);
     console.log("done");
 });
 }

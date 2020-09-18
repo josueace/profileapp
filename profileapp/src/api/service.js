@@ -46,7 +46,7 @@ export default {
   },
   edit (newProf){
     return  this.service.put('/edit',newProf)
-    .then(res => res.data)
+    .then(res => res)
   }
 
 }

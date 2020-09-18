@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import service from '../api/service';
 
 class Signup extends Component {
-constructor(){
-    super();
+constructor(props){
+    super(props);
     this.state={
         username:'',
         password:'',
@@ -16,8 +16,15 @@ constructor(){
 handleFormSubmit=()=> {
 service.signup(this.state)
 .then(res =>{
+
+    console.log(res+"hollybobbbbbbb");
+    this.setState({username:'',password:'',campus:'',course:""});
+    this.props.getUser(res);
+    console.log("done");
+
+}
     
-    this.props.history.push('/profile')});
+    );
 }
 
 handleChange(e){

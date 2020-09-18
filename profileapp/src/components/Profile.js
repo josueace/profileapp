@@ -55,15 +55,15 @@ componentWillReceiveProps(nextProps) {
 <label>
     username:
 </label>
-    <h1 className="black"> {this.props.User.data.username}</h1>
+    <h1 className="black"> {this.props.User.username}</h1>
 <label>
     campus:
 </label>
-    <h1 className="black">{this.props.User.data.campus}</h1>
+    <h1 className="black">{this.props.User.campus}</h1>
 <label>
     Course
 </label>
-    <h1 className="black">{this.props.User.data.course}</h1>
+    <h1 className="black">{this.props.User.course}</h1>
     
 </div>
 <div>
