@@ -45,6 +45,7 @@ export default {
     .then(response => response.data)
   },
   edit (newProf){
+    alert(JSON.stringify(newProf));
     return  this.service.put('/edit',newProf)
     .then(res => res)
   }

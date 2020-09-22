@@ -15,6 +15,7 @@ constructor(props){
 
 componentWillReceiveProps(nextProps) {
     this.setState({...this.state, loggedInUser: nextProps["User"]})
+    console.log("heyyyyyyyyyyyyy"+this.state.loggedInUser);
   }
 
 
@@ -28,17 +29,25 @@ componentWillReceiveProps(nextProps) {
     service.handleUpload(uploadData)
     .then(response =>{
         console.log(response);
-        this.state.loggedInUser.image=response.path;
-        this.setState({imageUrl:response.path})
-
+      //  this.state.loggedInUser.image=response.path;
+        this.setState({imageUrl:response.path});
+        console.log('imagepath:'+response.path);
+        console.log(this.state);
+        service.edit(this.state)
+        .then(res =>{
+            console.log(res);
+        })
+        .catch(err => err);
         console.log(this.state.loggedInUser);
 
         
-        
     })
+
     .catch(err =>{
         console.log("error while upload",err)
     })
+
+
 }
 
 

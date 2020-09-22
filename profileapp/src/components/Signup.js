@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import service from '../api/service';
+import { withRouter } from 'react-router-dom';
 
 class Signup extends Component {
 constructor(props){
@@ -20,7 +21,8 @@ service.signup(this.state)
     console.log(res+"hollybobbbbbbb");
     this.setState({username:'',password:'',campus:'',course:""});
     this.props.getUser(res);
-    console.log("done");
+    this.props.history.push('/profile');
+    
 
 }
     
@@ -30,7 +32,7 @@ service.signup(this.state)
 handleChange(e){
 const {name,value}=e.target;
 this.setState({[name]:value});
-console.log(this.state[[name]]);
+
 }
 
  render(){
@@ -79,4 +81,4 @@ console.log(this.state[[name]]);
     }
 }
 
-export default Signup;
+export default withRouter(Signup);

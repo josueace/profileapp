@@ -1,8 +1,11 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import service from '../api/service';
+import { withRouter } from 'react-router-dom';
 
 class Login extends Component {
+
+    
 constructor(props){
     super(props);
     this.state={
@@ -15,10 +18,10 @@ constructor(props){
 handleFormSubmit=()=> {
 service.login(this.state)
 .then(res =>{
-
-    this.setState({username:'',password:''});
-    this.props.getUser(res.data);
-    console.log("done");
+    
+    this.props.getUser(res.data);//call parent app.js gettheuser to set logged usewr
+    this.props.history.push("/profile");
+  
 });
 }
 
@@ -67,4 +70,4 @@ console.log(this.state[[name]]);
     }
 }
 
-export default Login;
+export default withRouter(Login);

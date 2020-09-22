@@ -8,17 +8,19 @@ import Profile from './components/Profile';
 import service from './api/service';
 import {Link} from 'react-router-dom';
 import ProtectedRoute from './components/protected-route';
+
 import './App.css';
 
 class App extends Component {
-constructor(props){
-  super(props);
+constructor(){
+  super();
   this.state ={
     loggedInUser:null
   };
 
  
 }
+
 
 fetchUser(){
   if(this.state.loggedInUser === null){
@@ -38,17 +40,23 @@ fetchUser(){
 }
 
 getTheUser = (userObj) =>{
+
+  alert('setting current user')
   this.setState({
     loggedInUser:userObj
   })
-  console.log(this.state.loggedInUser);
+  alert(JSON.stringify(this.state.loggedInUser))
+  console.log('paso1'+this.state.loggedInUser);
 }
 
 
 render(){
+
+  alert('apps render');
   this.fetchUser()
 
   console.log(this.state.loggedInUser);
+  const { history } = this.props;
 
   if(!this.state.loggedInUser){
   return (
@@ -56,9 +64,8 @@ render(){
     <div className="App">
     <Switch>
       
-    <Route path="/signup" render={() => <Signup getUser={this.getTheUser}/>} />
-     
-  <Route path="/login" render={() => <Login getUser={this.getTheUser}/>} />
+      <Route path="/signup" render={() => <Signup getUser={this.getTheUser}/>} />
+      <Route path="/login" render={() => <Login redirect={this.redirectToHome}getUser={this.getTheUser}/>} />
       <Route  path="/profile" render={() => <Profile User={this.state.loggedInUser}/>}/>
       <Route path="/" component={profileHome}/>
     </Switch>
@@ -66,8 +73,8 @@ render(){
   );}else{
     return(
       <div className="App">
-        <Link to='/profile'><button>profile</button></Link>
-       <Route  path="/" render={() => <Profile User={this.state.loggedInUser}/>}/>
+    
+       <Route  path="/profile" render={() => <Profile User={this.state.loggedInUser}/>}/>
       </div>
     )
   }
