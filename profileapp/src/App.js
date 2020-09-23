@@ -66,7 +66,7 @@ render(){
       
       <Route path="/signup" render={() => <Signup getUser={this.getTheUser}/>} />
       <Route path="/login" render={() => <Login redirect={this.redirectToHome}getUser={this.getTheUser}/>} />
-      <Route  path="/profile" render={() => <Profile User={this.state.loggedInUser}/>}/>
+  
       <Route path="/" component={profileHome}/>
     </Switch>
     </div>

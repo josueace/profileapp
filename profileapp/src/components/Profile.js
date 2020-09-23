@@ -6,17 +6,15 @@ class Profile extends Component {
 constructor(props){
     super(props);
     this.state={
-        loggedInUser:props.User.data,
-        imageUrl:'/25054583.jpg'
+        loggedInUser:props.User,
+        imageUrl:""
+      
         
     }
 }
 
 
-componentWillReceiveProps(nextProps) {
-    this.setState({...this.state, loggedInUser: nextProps["User"]})
-    console.log("heyyyyyyyyyyyyy"+this.state.loggedInUser);
-  }
+
 
 
   handleFileUpload =(e)=>{
@@ -28,14 +26,14 @@ componentWillReceiveProps(nextProps) {
 
     service.handleUpload(uploadData)
     .then(response =>{
-        console.log(response);
-      //  this.state.loggedInUser.image=response.path;
+        
+      this.state.loggedInUser.image=response.path;
         this.setState({imageUrl:response.path});
-        console.log('imagepath:'+response.path);
-        console.log(this.state);
-        service.edit(this.state)
+       
+        service.edit(this.state.loggedInUser)
         .then(res =>{
             console.log(res);
+
         })
         .catch(err => err);
         console.log(this.state.loggedInUser);
@@ -53,7 +51,6 @@ componentWillReceiveProps(nextProps) {
 
  render(){
 
-    console.log(this.props)
     return (
         
     <div className="right"> 
@@ -77,7 +74,7 @@ componentWillReceiveProps(nextProps) {
 </div>
 <div>
     <div className="intro">
-            <img width={200} height={200} class="img-circle" src={this.state.imageUrl}/>
+            <img width={200} height={200} class="img-circle" src={this.state.loggedInUser.image}/>
             <p>Welcome to IronProfile!
             </p>
         </div>
