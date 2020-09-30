@@ -23,9 +23,11 @@ constructor(){
 
 
 fetchUser(){
+  alert("enter fetch");
   if(this.state.loggedInUser === null){
     service.loggedin()
     .then(response =>{
+      console.log(response +"heyyyyyyyyyyyybob");
       this.setState({
         loggedInUser:response
       })

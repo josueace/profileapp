@@ -23,6 +23,9 @@ constructor(props){
     // req.body to .create() method when creating a new thing in '/api/things/create' POST route
 
     uploadData.append("image", e.target.files[0]);
+    uploadData.append("_id",this.state.loggedInUser._id);
+
+    console.log(uploadData);
 
     service.handleUpload(uploadData)
     .then(response =>{
