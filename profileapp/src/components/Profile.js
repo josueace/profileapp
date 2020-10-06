@@ -23,7 +23,7 @@ constructor(props){
     // req.body to .create() method when creating a new thing in '/api/things/create' POST route
 
     uploadData.append("image", e.target.files[0]);
-    uploadData.append("_id",this.state.loggedInUser._id);
+    uploadData.append("oldImage",this.state.loggedInUser.image);
 
     console.log(uploadData);
 

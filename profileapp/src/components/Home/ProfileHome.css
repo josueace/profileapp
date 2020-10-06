@@ -1,0 +1,674 @@
+/*
+background-grey: #F4F3F4;
+button-purple: #192592
+main-titles dark-grey: #2C303F;
+paragraph grey: #5b5e6d;
+nav grey: #5b5e6d;
+*/
+
+@media (max-width:600px){
+
+    .iteration1{
+        color:blue;
+    }
+    
+       /* THIS is the navigation part */
+    nav{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        
+      }
+      
+      nav ul{
+          display:none;
+      }
+      /* end of navigation */
+    
+    
+    
+    
+    
+      /* this is header section */
+    
+      h1 br{
+          display:block;
+      }
+    
+    header{
+        display:flex;
+        flex-direction:column;
+    }
+    .image1{
+        order:1;
+        height:400px;
+    }
+      .getBtn{
+          margin: 0 auto;
+          background-color:#192592;
+        color:white;
+        width:80%;
+        height:45px;
+        border-radius: 10px;
+      }
+      .center{
+          align-self:center;
+      }
+      header textarea{
+          border:1px solid #F4F3F4;
+          width:80%;
+          position:relative;
+          left:40px;
+          border-radius: 10px;
+         
+      }
+    
+    
+    /* end of header section */
+    
+    
+    
+    main{
+        background-color:#F4F3F4;
+        
+    }
+    main div{
+        
+        display:flex;
+        flex-direction:column;
+        align-self: stretch;
+        text-align:center;
+       
+    }
+    
+    
+    
+     .icon{
+          width:300px;
+          height:150px;
+          margin: 0 auto;
+          border-bottom: 1px solid #5b5e6d;
+     }
+    
+    main div button{
+       
+        background-color: #F4F3F4;
+        color:#192592;
+        width:200px;
+        height:40px;
+        margin: 0 auto;
+        border: 1px solid #192592;
+    }
+    .sign-in{
+        background-color:white;
+    }
+    
+    
+    /* end of main section */
+    
+    
+    /* footer section */
+    
+    footer{
+        color:#2C303F;
+    }
+    .slack{
+        width:100px;
+        height:100px;
+        margin-right:80%;
+    }
+    
+    footer .options{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content: stretch;
+    }
+    ul.clear{
+        list-style-type: none;
+    }
+    
+    div.footnote{
+        display:inline;
+    }
+    
+    .footnote li{
+        display:inline;
+    }
+    .end{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        flex-wrap:wrap;
+        align-items:center;
+    }
+    .end img{
+        width:20px;
+        height:20px;
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (min-width:600px) and (max-width:985px){
+     .iteration2{
+         color:blue;
+     }
+     nav{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+    }
+     .menu {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        
+      }
+    
+      nav ul{
+        display:none;
+    }
+    
+    
+    h1 br{
+        display:none;
+    }
+    /*   HEADER SECTION */
+    
+    header{
+      display:flex;
+      flex-direction:column;
+    }
+    .image1{
+      order:1;
+      height:400px;
+    }
+    
+    header .getBtn{
+        position:relative;
+        top:-40px;
+        left:50px;
+        margin: 0 auto;
+        background-color:#192592;
+      color:white;
+      width:30%;
+      height:45px;
+      border-radius: 10px;
+    }
+    
+    header textarea{
+        position:relative;
+        width:40%;
+    }
+    
+    /* main section */
+    
+    main{
+        background-color:#F4F3F4;
+        
+    }
+    main div{
+        
+        display:flex;
+        flex-direction:column;
+        align-self: stretch;
+        text-align:center;
+       
+    }
+    
+    .icon{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        width:300px;
+        height:150px;
+        align-self:flex-start;
+        border-bottom: 1px solid #5b5e6d;
+    }
+    
+    
+    main div button{
+     
+      background-color: #F4F3F4;
+      color:#192592;
+      width:200px;
+      height:40px;
+      margin: 0 auto;
+      border: 1px solid #192592;
+    }
+    
+    .twoicon{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        flex-wrap:wrap;
+    }
+    
+    div .getBtn{
+        margin: 0 auto;
+        background-color:#192592;
+      color:white;
+      width:30%;
+      height:45px;
+      border-radius: 10px;
+    }
+    .email textarea{
+        height: 50px;
+    }
+    .sign-in{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    .email{
+        display:flex;
+        flex-direction:row;
+    }
+    
+    
+    /* footer area */
+    
+    footer div{
+        display:flex;
+    }
+    
+    .slack{
+        width:100px;
+        height:100px;
+        
+    }
+    ul.clear{
+        list-style-type: none;
+    }
+    
+    div.footnote{
+        display:inline;
+    }
+    
+    .footnote li{
+        display:inline;
+    }
+    .foot{
+        display:flex;
+        justify-content: space-between;
+    }
+    .end{
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-end;
+        flex-wrap:nowrap;
+        align-items:center;
+    }
+    .end img{
+        width:20px;
+        height:20px;
+    }
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (min-width:985px) and (max-width:1200px){
+        .iteration3{
+            color:blue;
+        }
+        nav{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+        }
+         .menu {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+            
+          }
+        
+          nav ul{
+            display:none;
+        }
+        
+        
+        h1 br{
+            display:none;
+        }
+        /*   HEADER SECTION */
+        
+        header{
+          display:flex;
+          flex-direction:column;
+        }
+        .image1{
+          order:1;
+          height:400px;
+        }
+        
+        header .getBtn{
+            position:relative;
+            top:-40px;
+            left:50px;
+            margin: 0 auto;
+            background-color:#192592;
+          color:white;
+          width:30%;
+          height:45px;
+          border-radius: 10px;
+        }
+        
+        header textarea{
+            position:relative;
+            width:40%;
+        }
+        
+        /* main section */
+        
+        main{
+            background-color:#F4F3F4;
+            
+        }
+        main div{
+            
+            display:flex;
+            flex-direction:column;
+            align-self: stretch;
+            text-align:center;
+           
+        }
+        
+        .icon{
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            width:300px;
+            height:150px;
+            align-self:flex-start;
+            border-bottom: 1px solid #5b5e6d;
+        }
+        
+        
+        main div button{
+         
+          background-color: #F4F3F4;
+          color:#192592;
+          width:200px;
+          height:40px;
+          margin: 0 auto;
+          border: 1px solid #192592;
+        }
+        
+        .twoicon{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+        
+        div .getBtn{
+            margin: 0 auto;
+            background-color:#192592;
+          color:white;
+          width:30%;
+          height:45px;
+          border-radius: 10px;
+        }
+        .email textarea{
+            height: 50px;
+        }
+        .sign-in{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+        .email{
+            display:flex;
+            flex-direction:row;
+        }
+        
+        
+        /* footer area */
+        
+        footer div{
+            display:flex;
+        }
+        
+        .slack{
+            width:100px;
+            height:100px;
+            
+        }
+        ul.clear{
+            list-style-type: none;
+        }
+        
+        div.footnote{
+            display:inline;
+        }
+        
+        .footnote li{
+            display:inline;
+        }
+        .foot{
+            display:flex;
+            justify-content: space-between;
+        }
+        .end{
+            display:flex;
+            flex-direction:row;
+            justify-content:flex-end;
+            flex-wrap:nowrap;
+            align-items:center;
+        }
+        .end img{
+            width:20px;
+            height:20px;
+        }
+    }
+     
+    
+    
+    
+    
+    
+    @media (min-width:1200px){
+        html{
+            font-size:18px;
+        }
+        .iteration4{
+            color:blue;
+        }
+        nav{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul{
+            display:inline;
+            color:#2C303F;
+        }
+        nav li{
+            display: inline;
+            margin-right:10px;
+        }
+    
+        /* header section */
+        
+        header img{
+           float:left;
+           height:600px;
+            
+        }
+    
+        header h1{
+            font-size:4rem;
+        }
+    
+        main div{
+            clear:both;
+        }
+    
+        header textarea{
+            display:none;
+        }
+    
+        .getBtn{
+           
+            background-color:#192592;
+          color:white;
+          width:30%;
+          height:45px;
+          border-radius: 10px;
+        }
+    
+        /* main section */
+        
+        main{
+            background-color:#F4F3F4;
+            
+        }
+        main div{
+            
+            display:flex;
+            flex-direction:column;
+            align-self: stretch;
+            text-align:center;
+           
+        }
+        
+        .icon{
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            width:300px;
+            height:150px;
+            align-self:flex-start;
+            border-bottom: 1px solid #5b5e6d;
+        }
+        main div button{
+         
+            background-color: #F4F3F4;
+            color:#192592;
+            width:200px;
+            height:40px;
+            margin: 0 auto;
+            border: 1px solid #192592;
+          }
+          
+          
+    .twoicon{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        flex-wrap:wrap;
+    }
+          
+          div .getBtn{
+              margin: 0 auto;
+              background-color:#192592;
+            color:white;
+            width:100%;
+            height:45px;
+            border-radius: 10px;
+          }
+          .email textarea{
+              height: 50px;
+          }
+    
+          .sign-in{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+        .email{
+            display:flex;
+            flex-direction:row;
+        }
+        .email textarea{
+            display:none;
+        }
+    
+        /* end of main */
+    
+        /* start of footer */
+     
+        footer div{
+            display:flex;
+        }
+        
+        .slack{
+            width:100px;
+            height:100px;
+            
+        }
+        ul.clear{
+            list-style-type: none;
+        }
+        
+        div.footnote{
+            display:inline;
+        }
+        
+        .footnote li{
+            display:inline;
+        }
+        .foot{
+            display:flex;
+            justify-content: space-between;
+        }
+    
+        .end{
+            display:flex;
+            flex-direction:row;
+            justify-content:flex-end;
+            flex-wrap:nowrap;
+            align-items:center;
+        }
+        .end img{
+            width:20px;
+            height:20px;
+        }
+    }

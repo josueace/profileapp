@@ -1,0 +1,19 @@
+.blue{
+    background-color: aquamarine;
+}
+
+.box {
+    display: block;
+    width: 100vw;
+    height: 20px;
+    background-color: inherit;
+}
+
+.box:hover {
+    background-color: #00D1AE;
+    height: 80px;
+    transition-property: height;
+    transition-duration: 0.5s;
+    transition-timing-function:linear;
+    transition-delay: 0s;
+}
